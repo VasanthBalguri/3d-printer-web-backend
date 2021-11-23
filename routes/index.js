@@ -9,7 +9,30 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Printer App' });
 });
 
-router.get('/request', function(req,res,next){
+router.post('/addPrinter',function(req,res,next){
+    console.log("received request to add printer:" + req.printer-id);
+    
+    const options = {
+        hostname: req.link,
+        port: req.port,
+        path: '/connect',
+        method: 'GET'}
+        
+    const req = https.request(options, res => {
+    
+        res.on('data', d => {
+        
+            
+        });
+    });
+});
+
+router.get('/monitor/{id}',function(req,res,next){
+    
+    
+    
+});
+/*router.get('/request', function(req,res,next){
     console.log("received");
     res.send([{id:"15",name:"z",attributes:[{attributeName:"print-task-name",attributeType:"static",attributeValue:"taks1"},
                                                     {attributeName:"estimated-time",attributeType:"dynamic",attributeValue:"20"}]},
@@ -61,5 +84,7 @@ router.delete('/removeMachine/{id}',function(req,res,next){
 
     
 })
+*/
+
 
 module.exports = router;

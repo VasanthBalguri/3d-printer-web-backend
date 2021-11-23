@@ -10,8 +10,21 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "mongoose": "^6.0.0",
+    "mongoose": "^5.13.12",
     "morgan": "~1.9.1",
+    "passport-local-mongoose": "^5.0.1",
     "socket.io-client": "^4.1.3"
-  }
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VasanthBalguri/3d-printer-web-backend.git"
+  },
+  "author": "vasanth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VasanthBalguri/3d-printer-web-backend/issues"
+  },
+  "homepage": "https://github.com/VasanthBalguri/3d-printer-web-backend#readme",
+  "description": ""
 }
